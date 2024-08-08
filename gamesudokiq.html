@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudokIQ</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/13/13706.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="css/gamesudokiq.css">
+</head>
+
+<body>
+    <div class="giris">
+        <div class="basliq">
+            <span class="level-button ana-menu1 "><i class="fa-solid fa-rotate-right fa-2xl" style="color: #ffffff;" ></i></span>
+            <span class="level-button option-menu1" onclick="ikinci()"><i class="fa-solid fa-gear fa-2xl" style="color: white;"></i></span>
+        </div>
+        <div class="start">
+            <span class="sudokuwrite">SudokIQ</span>
+            <button class="button button1">Start</button>
+        </div>
+    </div>
+    <div class="level">
+        <button class="button  button2">Easy</button>
+        <button class="button  button3">Medium</button>
+        <button class="button  button4">Hard</button>
+        <button class="button  button5">Finish</button>
+    </div>
+    <div class="easylevelmain">
+        <div class="easylevel">
+            <span class="level-button ana-menu"><i class="fa-solid fa-house" style="color: white;"></i></span>
+            <span class="write" style="font-size: 19px;">Easy Level</span>
+            <span class="level-button option-menu" onclick="birinci()"><i class="fa-solid fa-gear" style="color: white;"></i></span>
+        </div>
+        <div class="main">
+            <table class="tableea">
+                <tbody>
+                    <tr class="tere tr1">
+                        <td><input class="myinput" type="text" value="3" readonly></td>
+                        <td><input class="myinput" type="text" value="1" readonly></td>
+                        <td><input class="myinput" type="text" value="5" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <!-- 9 ucun xana tr0  -->
+                        <td><input class="myinput" type="text" value="2" readonly></td>
+                        <td><input class="myinput" type="text" value="7" readonly></td>
+                        <td><input class="myinput" type="text" value="8" readonly></td>
+                        <td><input class="myinput" type="text" value="4" readonly></td>
+                        <td><input class="myinput" type="text" value="6" readonly></td>
+                    </tr>
+                    <tr class="tere tr2">
+                        <td><input class="myinput" type="text" value="8" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="2" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="1" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="5" readonly></td>
+                    </tr>
+                    <tr class="tere tr3">
+                        <td><input class="myinput" type="text" value="9" readonly></td>
+                        <td><input class="myinput" type="text" value="6" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="3" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="1" readonly></td>
+                        <td><input class="myinput" type="text" value="7" readonly></td>
+                        <td><input class="myinput" type="text" value="2" readonly></td>
+                    </tr>
+                    <tr class="tere tr4">
+                        <td><input class="myinput" type="text" value="1" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="6" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="4" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="5" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="3" readonly></td>
+                    </tr>
+                    <tr class="tere tr5">
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="9" readonly></td>
+                        <td><input class="myinput" type="text" value="7" readonly></td>
+                        <td><input class="myinput" type="text" value="6" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="3" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="2" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                    </tr>
+                    <tr class="tere tr6">
+                        <td><input class="myinput" type="text" value="4" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="3" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="5" readonly></td>
+                        <td><input class="myinput" type="text" value="2" readonly></td>
+                        <td><input class="myinput" type="text" value="7" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="9" readonly></td>
+                    </tr>
+                    <tr class="tere tr7">
+                        <td><input class="myinput" type="text" value="6" readonly></td>
+                        <td><input class="myinput" type="text" value="4" readonly></td>
+                        <td><input class="myinput" type="text" value="8" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="1" readonly></td>
+                        <td><input class="myinput" type="text" value="2" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                    </tr>
+                    <tr class="tere tr8">
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="1" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="7" readonly></td>
+                        <td><input class="myinput" type="text" value="4" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                    </tr>
+                    <tr class="tere tr9">
+                        <td><input class="myinput" type="text" value="7" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="9" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="6" readonly></td>
+                        <td><input class="myinput" type="text" value="8" readonly></td>
+                        <td><input class="myinput" type="text" value="3" readonly></td>
+                        <td><input class="myinput" type="text" readonly></td>
+                        <td><input class="myinput" type="text" value="4" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <button class="buttons bir">1</button>
+            <button class="buttons iki">2</button>
+            <button class="buttons uc">3</button>
+            <button class="buttons dord">4</button>
+            <button class="buttons bes">5</button>
+            <button class="buttons alti">6</button>
+            <button class="buttons yeddi">7</button>
+            <button class="buttons sekkiz">8</button>
+            <button class="buttons doqquz">9</button>
+        </div>
+        <div class="silmek">
+            <button class="geri"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+            <span class="hata"><i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i> <span class="hatasayi" id="hatasayi" >0</span> </span>
+        </div>
+    </div>
+    <div class="containersetting">
+        <div class="setting1">
+            <span></span>
+        </div>
+        <div class="setting">
+
+            <div class="first_h">
+                <h1 class="writesettings">Settings</h1>
+                <h1 class="closesetting">X</h1>
+            </div>
+
+            <div class="language">
+                <p class="first_p">Language</p>
+                <select name="Seç" id="list" class="secim">
+                    <option value="English">English</option>
+                    <option value="Azərbaycan">Azərbaycan</option>
+                </select>
+            </div>
+            <div class="sound">
+                <p class="second_p">Sound</p>
+                <label class="inputs">
+                   
+               <div class="input111" onclick="playAudio()"><input type="radio" id="onRadio"  name="ses" class="on" value="On" > On</div> 
+               <div class="input222" style="color:rgba(255, 0, 0, 0.5);"> <input type="radio" id="offRadio" class="off" name="ses" value="Off" onclick="pauseAudio()" checked > Off</div>
+               <audio id="myAudio">
+                <source src="image/idea22theme.mp3" type="audio/mpeg">
+              </audio>
+            </label>
+            </div>
+            <div class="loqolar">
+                <div class="loqo1"><a href="https://instagram.com/alyvh29?igshid=NTc4MTIwNjQ2YQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="loqo2"><a href="mailto:eliyevtalib2020@gmail.com" target="_blank"><i class="fa-brands fa-google"></i></a></div>
+            </div>
+        </div>
+
+    </div>
+    <div id="myModal" class="modalalert">
+        <div class="containermodal">
+            <div class="modal-content">
+                <span></span>
+                <div class="first_p">
+                    <p class="modal_p">You have completed this level. If you want to play this level again, reload page</p>
+                </div>
+                <div class="buttonsmodal">
+                    <button class="gerimodal">Cancel</button>
+                    <button class="tamammodal">Reload Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal2" class="modalalert2">
+        <div class="containermodal">
+            <div class="modal-content modal-content2">
+                <span></span>
+                <div class="first_p">
+                    <p class="modal_p2">Reload the page?</p>
+                </div>
+                <div class="buttonsmodal">
+                    <button class="gerimodal2">Cancel</button>
+                    <button class="tamammodal2">Reload Page</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mediummm levelll html -->
+    <div class="mediumlevelmain">
+        <div class="mediumlevelmd">
+            <span class="level-buttonmd ana-menumd"><i class="fa-solid fa-house" style="color: white;"></i></span>
+            <span class="writemd" style="font-size: 19px;">Medium Level</span>
+            <span class="level-buttonmd option-menumd" onclick="ucuncu()"><i class="fa-solid fa-gear" style="color: white;"></i></span>
+        </div>
+
+        <div class="mainmd">
+            <table class="tablemd">
+                <tbody>
+                    <tr class="teremd tr1">
+                        <td><input class="myinputmd" type="text" value="9" readonly></td>
+                        <td><input class="myinputmd" type="text" value="3" readonly></td>
+                        <td><input class="myinputmd" type="text" value="5" readonly></td>
+                        <td><input class="myinputmd" type="text" value="7" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="6" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                    </tr>
+                    <tr class="teremd tr2">
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="1" readonly></td>
+                        <td><input class="myinputmd" type="text" value="5" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                    </tr>
+                    <tr class="teremd tr3">
+                        <td><input class="myinputmd" type="text" value="1" readonly></td>
+                        <td><input class="myinputmd" type="text" value="6" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="9" readonly></td>
+                        <td><input class="myinputmd" type="text" value="3" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="2" readonly></td>
+                    </tr>
+                    <tr class="teremd tr4">
+                        <td><input class="myinputmd" type="text" value="6" readonly></td>
+                        <td><input class="myinputmd" type="text" value="1" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="4" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="9" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                    </tr>
+                    <tr class="teremd tr5">
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="9" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="6" readonly></td>
+                        <td><input class="myinputmd" type="text" value="4" readonly></td>
+                        <td><input class="myinputmd" type="text" value="8" readonly></td>
+                        <td><input class="myinputmd" type="text" value="7" readonly></td>
+                    </tr>
+                    <tr class="teremd tr6">
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="2" readonly></td>
+                        <td><input class="myinputmd" type="text" value="9" readonly></td>
+                        <td><input class="myinputmd" type="text" value="3" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                    </tr>
+                    <tr class="teremd tr7">
+                        <td><input class="myinputmd" type="text" value="2" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="1" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="3" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="7" readonly></td>
+                        <td><input class="myinputmd" type="text" value="4" readonly></td>
+                    </tr>
+                    <tr class="teremd tr8">
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="8" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="4" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="1" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                    </tr>
+                    <tr class="teremd tr9">
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="4" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" value="6" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                        <td><input class="myinputmd" type="text" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="containermd">
+            <button class="buttonsmd bir">1</button>
+            <button class="buttonsmd iki">2</button>
+            <button class="buttonsmd uc">3</button>
+            <button class="buttonsmd dord">4</button>
+            <button class="buttonsmd bes">5</button>
+            <button class="buttonsmd alti">6</button>
+            <button class="buttonsmd yeddi">7</button>
+            <button class="buttonsmd sekkiz">8</button>
+            <button class="buttonsmd doqquz">9</button>
+        </div>
+        <div class="silmekmd">
+            <button class="gerimd"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+            <span class="hatamd"><i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i> <span class="hatasayi2" id="hatasayi2" >0</span> </span>
+        </div>
+
+    </div>
+
+
+    <!-- hard levelll htmlll -->
+    <div class="hardlevelmain">
+        <div class="hardlevelhd">
+            <span class="level-buttonhd ana-menuhd"><i class="fa-solid fa-house" style="color: white;"></i></span>
+            <span class="writehd" style="font-size: 19px;">Hard Level</span>
+            <span class="level-buttonhd option-menuhd" onclick="dorduncu()"><i class="fa-solid fa-gear" style="color: white;"></i></span>
+        </div>
+        <div class="mainhd">
+            <table class="tablehd">
+                <tbody>
+                    <tr class="terehd tr1">
+                        <td><input class="myinputhd" type="text" value="7" readonly></td>
+                        <td><input class="myinputhd" type="text" value="8" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="4" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="2" readonly></td>
+                    </tr>
+                    <tr class="terehd tr2">
+                        <td><input class="myinputhd" type="text" value="5" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="3" readonly></td>
+                        <td><input class="myinputhd" type="text" value="9" readonly></td>
+                        <td><input class="myinputhd" type="text" value="4" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                    </tr>
+                    <tr class="terehd tr3">
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="4" readonly></td>
+                        <td><input class="myinputhd" type="text" value="2" readonly></td>
+                        <td><input class="myinputhd" type="text" value="1" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="6" readonly></td>
+                        <td><input class="myinputhd" type="text" value="8" readonly></td>
+                        <td><input class="myinputhd" type="text" value="5" readonly></td>
+                    </tr>
+                    <tr class="terehd tr4">
+                        <td><input class="myinputhd" type="text" value="3" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="5" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="4" readonly></td>
+                        <td><input class="myinputhd" type="text" value="8" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                    </tr>
+                    <tr class="terehd tr5">
+                        <td><input class="myinputhd" type="text" value="6" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="7" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="3" readonly></td>
+                    </tr>
+                    <tr class="terehd tr6">
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="7" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="8" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="4" readonly></td>
+                    </tr>
+                    <tr class="terehd tr7">
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="1" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="8" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                    </tr>
+                    <tr class="terehd tr8">
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="7" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                    </tr>
+                    <tr class="terehd tr9">
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="7" readonly></td>
+                        <td><input class="myinputhd" type="text" value="9" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                        <td><input class="myinputhd" type="text" value="2" readonly></td>
+                        <td><input class="myinputhd" type="text" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="containerhd">
+            <button class="buttonshd bir">1</button>
+            <button class="buttonshd iki">2</button>
+            <button class="buttonshd uc">3</button>
+            <button class="buttonshd dord">4</button>
+            <button class="buttonshd bes">5</button>
+            <button class="buttonshd alti">6</button>
+            <button class="buttonshd yeddi">7</button>
+            <button class="buttonshd sekkiz">8</button>
+            <button class="buttonshd doqquz">9</button>
+        </div>
+        <div class="silmekhd">
+            <button class="gerihd"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+            <span class="hatahd"><i class="fa-solid fa-circle-xmark" style="color: #ffffff;"></i> <span class="hatasayi3" id="hatasayi3" >0</span> </span>
+        </div>
+    </div>
+
+    <script src="javascript/gamesudokiq.js"></script>
+</body>
+
+</html>
